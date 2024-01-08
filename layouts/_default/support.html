@@ -1,0 +1,55 @@
+{{ define "main" }}
+    <div class="container py-3">
+        <header>
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h1 class="display-4 fw-normal text-body-emphasis">{{ .Params.Title }}</h1>
+              <p class="fs-5 text-body-secondary">
+                {{ .Params.description}}
+              </p>
+            </div>
+          </header>
+
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal card-title">Donate</h4>
+                </div>
+                <div class="card-body">
+                  <p>Make a financial contribution to help fun future development projets and hire community artist.</p>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Dontation Link</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal card-title">Volunteer</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Feeling inspired to shasre your 2d or 3d art with the creative community? Check out the volunteer form.</p>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Volunteer Form</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal card-title">Feedback</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>How are we doing? If there is somethign you would like to see improved please share below.</p>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Feedback Form</button>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+
+
+    {{ .Content }}
+    </div>
+{{ end }}

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="container">
+
+  <section class=" mt-5 text-center container">
+    <div class="row py-lg-2">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">News Updates</h1>
+        <p class="lead text-body-secondary">Share your completed <a href="/support/">projects</a> on the site here. 🎮</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="box border mt-2 p-5">
+      <h1> {{ .Title }}</h1>
+
+      <p> {{ .Content}}</p>
+    
+
+      {{ with .PrevInSection }}
+      <a href="{{ .RelPermalink }}"> Next: {{ .Title}}</a>
+      {{ end }}
+
+      {{ with .NextInSection }}
+     <a href="{{ .RelPermalink }}">Previous: {{ .Title}}</a>
+     {{ end }}
+
+     <a href="/posts/">View All Post</a>
+
+
+    </div>
+
+  </section>
+
+</div>
+{{ end }}

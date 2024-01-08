@@ -1,10 +1,57 @@
 {{ define "main" }}
-  <h1>My Art</h1>
-  <ul>
-  {{ range .Pages }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}
-    </li>
-  {{ end }}
-  </ul>
+<div class="container">
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Asset Library</h1>
+        <p class="lead text-body-secondary">Our full collection of free game art and assets. Check out our <a href="/frequently-asked-questions/"> FAQ</a> to learn about usage rights. 🎮</p>
+      </div>
+    </div>
+  </section>
+
+  <div class=" py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
+
+        {{/*  Card Starts  */}}
+        {{ range .Pages }}
+
+        <div class="col">
+          <div class="card shadow-sm">
+              <a href= {{.Permalink}}>
+                  <img src="https://cdn.pixabay.com/photo/2022/06/25/18/55/pixel-art-7284052_960_720.png"
+                      class="bd-placeholder-img card-img-top" alt="Image 8">
+              </a>
+              <div class="card-body">
+                  <h3 class="card-title">{{ .Title}}</h3>
+                  <div class="d-flex justify-content-start align-items-center">
+                    {{ range .GetTerms "tags"}}
+                      <a href={{ .Permalink}} class="badgeA"><span class="badge text-bg-primary rounded-pill">{{ .Name}}</span></a>
+                      {{ end}}
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      {{ end}}
+
+        {{/*  Card Ends  */}}
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
 {{ end }}
+
+
+{{/*  <h1>My Art</h1>
+<ul>
+{{ range .Pages }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}
+  </li>
+{{ end }}
+</ul>  */}}

@@ -1,7 +1,13 @@
 {{ define "main" }}
-<div>
-    <h1>{{ .Params.Title }}</h1>
-    <p>{{ .Date.Format "January 2, 2006" }}</p>
+    <div class="container py-3">
+        <header>
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h1 class="display-4 fw-normal text-body-emphasis">{{ .Params.Title }}</h1>
+              <p class="fs-5 text-body-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo fugit, quasi molestias obcaecati odit magnam aperiam reprehenderit placeat facere!
+              </p>
+            </div>
+          </header>
     {{ .Content }}
-</div>
+    </div>
 {{ end }}

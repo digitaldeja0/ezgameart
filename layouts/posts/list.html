@@ -1,4 +1,39 @@
+
 {{ define "main" }}
+<div class="container">
+
+  <section class=" mt-5 text-center container">
+    <div class="row py-lg-2">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">News Updates</h1>
+        <p class="lead text-body-secondary">Share your completed <a href="/support/">projects</a> on the site here. 🎮</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+
+
+    {{ range .Pages }}
+
+    <div class="box border mt-2 p-5">
+      <h1>{{ .Title }}</h1>
+      <small>{{ .Date.Format "January 2, 2006" }}</small>
+      <p>{{ .Content}}</p>
+      <a href={{ .Permalink }} class="btn btn-primary btn-sm">Read More</a>
+    </div>
+  {{ end }}
+
+
+
+
+  </section>
+
+</div>
+{{ end }}
+
+{{/*  {{ define "main" }}
+<div class="container">
   <h1>My Posts</h1>
   <ul>
   {{ range .Pages }}
@@ -7,4 +42,5 @@
     </li>
   {{ end }}
   </ul>
-{{ end }}
+</div>
+{{ end }}  */}}

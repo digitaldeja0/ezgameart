@@ -4,3 +4,9 @@ title = 'EZ Game Art'
 
 [params]
     dateFormat = "Jan 2, 2006"
+
+[taxonomies]
+    category = "categories"
+    author = "authors"
+    tag = "tags"
+    includes = "includes"

@@ -1,10 +1,26 @@
 {{ define "main" }}
-  <h1>My Home</h1>
-  <ul>
-  {{ range .Pages }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}
-    </li>
-  {{ end }}
-  </ul>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Free Game Assets</h1>
+        <p class="lead text-body-secondary">Free art for game developers and designers. Speed up prototyping with a diverse collection of assets. Enhance your projects effortlessly. Your creative journey begins here.</p>
+        <p>
+          <a href="/art/" class="btn btn-primary my-2">View All</a>
+          <a href="/support/" class="btn btn-secondary my-2">Contribute</a>
+        </p>
+      </div>
+    </div>
+    {{ partial "mainImgGrid.html" }}
+  </section>
+
 {{ end }}
+
+{{/*  <h1>My Home</h1>
+<ul>
+{{ range .Pages }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}
+  </li>
+{{ end }}
+</ul>  */}}
