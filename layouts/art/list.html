@@ -20,13 +20,13 @@
         <div class="col">
           <div class="card shadow-sm">
               <a href= {{.Permalink}}>
-                  <img src="https://cdn.pixabay.com/photo/2022/06/25/18/55/pixel-art-7284052_960_720.png"
+                  <img src={{ .Params.mainImg}}
                       class="bd-placeholder-img card-img-top" alt="Image 8">
               </a>
               <div class="card-body">
                   <h3 class="card-title">{{ .Title}}</h3>
                   <div class="d-flex justify-content-start align-items-center">
-                    {{ range .GetTerms "tags"}}
+                    {{ range .GetTerms "categories"}}
                       <a href={{ .Permalink}} class="badgeA"><span class="badge text-bg-primary rounded-pill">{{ .Name}}</span></a>
                       {{ end}}
                   </div>

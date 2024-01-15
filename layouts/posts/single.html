@@ -18,14 +18,14 @@
     
 
       {{ with .PrevInSection }}
-      <a href="{{ .RelPermalink }}"> Next: {{ .Title}}</a>
+      <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm"> Next: {{ .Title}}</a>
       {{ end }}
 
       {{ with .NextInSection }}
-     <a href="{{ .RelPermalink }}">Previous: {{ .Title}}</a>
+     <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm">Previous: {{ .Title}}</a>
      {{ end }}
 
-     <a href="/posts/">View All Post</a>
+     <a href="/posts/" class="btn btn-primary btn-sm">View All Post</a>
 
 
     </div>

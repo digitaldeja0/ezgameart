@@ -4,10 +4,10 @@ date = {{ .Date }}
 draft = true
 license = "https://creativecommons.org/publicdomain/zero/1.0/"
 mainImg = "/images/img.png"
-author = ["Low Poly Princess"]
+authors = ["Low Poly Princess"]
 authorLink = "https://www.lowpolyprincess.com/"
-tags = ["general"]
-description = ""
+categories = ["general"]
+description = " A fun and cute example perfect for a simple game."
 downloadLink = "/"
-includes = ["Downloadable format", "Quality design" ]
+includes = ["FBX", "GLTF/GLB", "Downloadable format", "Quality design", "3D graphic."]
 +++

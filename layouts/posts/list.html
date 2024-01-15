@@ -19,7 +19,7 @@
     <div class="box border mt-2 p-5">
       <h1>{{ .Title }}</h1>
       <small>{{ .Date.Format "January 2, 2006" }}</small>
-      <p>{{ .Content}}</p>
+      <p>{{ .Content | truncate 200 | safeHTML}}</p>
       <a href={{ .Permalink }} class="btn btn-primary btn-sm">Read More</a>
     </div>
   {{ end }}
@@ -32,15 +32,3 @@
 </div>
 {{ end }}
 
-{{/*  {{ define "main" }}
-<div class="container">
-  <h1>My Posts</h1>
-  <ul>
-  {{ range .Pages }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}
-    </li>
-  {{ end }}
-  </ul>
-</div>
-{{ end }}  */}}
