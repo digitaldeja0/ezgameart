@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'EZ Game Art'
+baseURL = ""
+languageCode = "en-us"
+title = "EZ Game Art"
 
 [params]
     dateFormat = "Jan 2, 2006"
@@ -8,5 +8,5 @@ title = 'EZ Game Art'
 [taxonomies]
     category = "categories"
     author = "authors"
-    tag = "tags"
+    tag = ""
     includes = "includes"
