@@ -1,36 +1,37 @@
 {{ define "main" }}
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Free Game Assets</h1>
-        <p class="lead text-body-secondary">Free art for game developers and designers. Speed up prototyping with a diverse collection of assets. Enhance your projects effortlessly. Your creative journey begins here.</p>
-        <p>
-          <a href="/art/" class="btn btn-primary my-2">View All</a>
-          <a href="/support/"  class="btn btn-secondary my-2">Support</a>
-        </p>
-      </div>
+<section class="py-5 text-center container">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Free Game Assets</h1>
+      <p class="lead text-body-secondary">Free art for game developers and designers. Speed up prototyping with a
+        diverse collection of assets. Enhance your projects effortlessly. Your creative journey begins here.</p>
+      <p>
+        <a href="/art/" class="btn btn-primary my-2">View All</a>
+        <a href="/support/" class="btn btn-secondary my-2">Support</a>
+      </p>
     </div>
+  </div>
 
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        {{range .Data.Pages}}
-        {{ if eq .RelPermalink "/art/"}} 
-        {{range .Data.Pages}}
-        <div class="col">
-          <a href={{ .Permalink}} >
-            <img src={{.Params.mainImg}} class="img-fluid" alt={{.Title}}>
-          </a>
-        </div>
-        {{end}}
-        {{end}}
-        {{end}}
-
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {{range .Data.Pages}}
+      {{ if eq .RelPermalink "/art/"}}
+      {{range .Data.Pages}}
+      <div class="col">
+        <a href={{ .Permalink}}>
+          <img src={{.Params.mainImg}} class="img-fluid" alt={{.Title}}>
+        </a>
       </div>
+      {{end}}
+      {{end}}
+      {{end}}
+
     </div>
-  
+  </div>
 
 
-  </section>
+
+</section>
 
 {{ end }}
