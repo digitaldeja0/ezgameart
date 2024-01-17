@@ -9,6 +9,5 @@ title = "EZ Game Art"
 [taxonomies]
     category = "categories"
     author = "authors"
-    tag = ""
     includes = "includes"
 
