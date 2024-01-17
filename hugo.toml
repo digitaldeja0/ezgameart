@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "EZ Game Art"
 
 [params]
+    description = "Fun and Free Game Assets." 
     dateFormat = "Jan 2, 2006"
 
 [taxonomies]
@@ -10,3 +11,4 @@ title = "EZ Game Art"
     author = "authors"
     tag = ""
     includes = "includes"
+

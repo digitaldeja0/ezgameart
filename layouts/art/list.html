@@ -12,29 +12,35 @@
   </section>
 
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 
       {{/* Card Starts */}}
+
       {{ range .Pages }}
-
-      <div class="col">
+    <div class="col">
         <div class="card shadow-sm">
-          <a href={{.Permalink}}>
-            <img src={{ .Params.mainImg}} class="bd-placeholder-img card-img-top" alt="Image 8">
-          </a>
-          <div class="card-body">
-            <h3 class="card-title">{{ .Title}}</h3>
-            <div class="d-flex justify-content-start align-items-center">
-              {{ range .GetTerms "categories"}}
-              <a href={{ .Permalink}} class="badgeA"><span class="badge text-bg-primary rounded-pill">{{
-                  .Name}}</span></a>
-              {{ end}}
+            <a href={{.Permalink}}>
+                <img src={{ .Params.mainImg}} class="bd-placeholder-img card-img-top" alt="Image 8">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title">{{ .Title}}</h3>
+                <div class="d-flex flex-wrap justify-content-start align-items-center">
+                    {{ $count := 0 }}
+                    {{ range .GetTerms "categories"}}
+                        {{ if ge $count 4 }}
+                            {{ break }}
+                        {{ end }}
+                        <a href={{ .Permalink}} class="badgeA">
+                            <span class="badge text-bg-primary rounded-pill m-1">{{ .Name}}</span>
+                        </a>
+                        {{ $count = add $count 1 }}
+                    {{ end }}
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+{{ end }}
 
-      {{ end}}
 
       {{/* Card Ends */}}
 

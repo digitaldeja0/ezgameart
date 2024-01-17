@@ -1,9 +1,4 @@
-:root{
-    --bg: black;
-    --bgLi: gray; 
-    --color: white;
-}
-
-.badgeA{
-  margin-right: 5px;
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none;
 }
