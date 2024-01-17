@@ -17,29 +17,29 @@
       {{/* Card Starts */}}
 
       {{ range .Pages }}
-    <div class="col">
+      <div class="col">
         <div class="card shadow-sm">
-            <a href={{.Permalink}}>
-                <img src={{ .Params.mainImg}} class="bd-placeholder-img card-img-top" alt="Image 8">
-            </a>
-            <div class="card-body">
-                <h3 class="card-title">{{ .Title}}</h3>
-                <div class="d-flex flex-wrap justify-content-start align-items-center">
-                    {{ $count := 0 }}
-                    {{ range .GetTerms "categories"}}
-                        {{ if ge $count 4 }}
-                            {{ break }}
-                        {{ end }}
-                        <a href={{ .Permalink}} class="badgeA">
-                            <span class="badge text-bg-primary rounded-pill m-1">{{ .Name}}</span>
-                        </a>
-                        {{ $count = add $count 1 }}
-                    {{ end }}
-                </div>
+          <a href={{.Permalink}}>
+            <img src={{ .Params.mainImg}} class="bd-placeholder-img card-img-top" alt="Image 8">
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">{{ .Title}}</h3>
+            <div class="d-flex flex-wrap justify-content-start align-items-center">
+              {{ $count := 0 }}
+              {{ range .GetTerms "categories"}}
+              {{ if ge $count 4 }}
+              {{ break }}
+              {{ end }}
+              <a href={{ .Permalink}} class="badgeA">
+                <span class="badge text-bg-primary rounded-pill m-1">{{ .Name}}</span>
+              </a>
+              {{ $count = add $count 1 }}
+              {{ end }}
             </div>
+          </div>
         </div>
-    </div>
-{{ end }}
+      </div>
+      {{ end }}
 
 
       {{/* Card Ends */}}
